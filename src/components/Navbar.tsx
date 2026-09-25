@@ -56,8 +56,8 @@ export default function Navbar({
                   Namma NyayaMitra
                 </span>
                 <span className="text-[9px] text-muted italic font-medium leading-normal mt-0.5 whitespace-nowrap">
-                  {nativeLanguage === "Kannada" ? "ನ್ಯಾಯಮಿತ್ರ • ಉಚಿತ ರಕ್ಷಾ ಕವಚ" 
-                   : nativeLanguage === "Hindi" ? "न्यायमित्र • निःशुल्क कानूनी कवच" 
+                  {nativeLanguage === "Kannada" ? "ನಮ್ಮ ನ್ಯಾಯಮಿತ್ರ • ಉಚಿತ ರಕ್ಷಾ ಕವಚ"
+                   : nativeLanguage === "Hindi" ? "हमारा न्यायमित्र • निःशुल्क कानूनी कवच" 
                    : nativeLanguage === "Telugu" ? "న్యాయమిత్ర • లీగల్ షీల్డ్"
                    : "Namma NyayaMitra • Legal Shield"}
                 </span>
