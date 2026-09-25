@@ -448,7 +448,7 @@ export default function Home({ setActivePage, viewMode, setDocTypePreSelect }: H
             {nativeLanguage === "Kannada" ? "ಸಣ್ಣ ಅಂಗಡಿ ಮತ್ತು ಸಣ್ಣ ವ್ಯಾಪಾರಗಳಿಗೆ ಉಚಿತ ಕಾನೂನು ರಕ್ಷಣೆ"
              : nativeLanguage === "Hindi" ? "छोटे व्यवसायों और दुकानों के लिए मुफ़्त कानूनी सुरक्षा"
              : nativeLanguage === "Telugu" ? "చిన్న దుకాణాలు మరియు MSME ల కొరకు ఉచిత న్యాయ రక్షణ"
-             : "Free Legal Protection for Small Shops & MSMEs"}
+             : "Legal shield for small businesses(MSMEs and micro-entrepreneurs)"}
           </p>
           <div className="flex flex-col gap-1 text-sm text-gold/90 font-bold italic justify-center items-center">
             <span>{translate("welcomeSub", nativeLanguage)}</span>
