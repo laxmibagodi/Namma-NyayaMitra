@@ -52,7 +52,7 @@ const BUSINESS_CATEGORIES = [
 // Step information voices / text blocks to satisfy illiterate assistance voice synthesis
 const VOICE_GUIDANCE: Record<number, { en: string; hi: string; kn: string; te: string }> = {
   1: {
-    en: "Welcome to NyayaAI. In Step 1, select your native language so the app can talk to you and translate documents in the local dialect.",
+    en: "Welcome to Namma NyayaMitra. In Step 1, select your native language so the app can talk to you and translate documents in the local dialect.",
     hi: "न्यायमित्र में आपका स्वागत है। चरण 1 में, अपनी भाषा चुनें ताकि यह ऐप आपसे आपकी मातृभाषा में सीधे बात कर सके।",
     kn: "ನ್ಯಾಯಮಿತ್ರಕ್ಕೆ ಸುಸ್ವಾಗತ. ಹಂತ 1 ರಲ್ಲಿ, ಅಪ್ಲಿಕೇಶನ್ ನಿಮ್ಮೊಂದಿಗೆ ಮಾತನಾಡಲು ಮತ್ತು ಸುಲಭವಾಗಿ ಭಾಷಾಂತರಿಸಲು ನಿಮ್ಮ ಮಾತೃಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
     te: "9ನ್ಯಾಯಮಿತ್ರಕು స్వాగతం. మొదటి దశలో మీ మాతృభాషను ఎంచుకోండి, తద్వారా ఈ యాప్ మీతో నేరుగా మాట్లాడగలదు."
@@ -248,7 +248,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
           <ShieldCheck className="h-9 w-9 text-gold" />
         </div>
         <h1 className="font-serif font-black text-2xl text-navy leading-none tracking-tight">
-          NyayaAI • न्यायमित्र • ನ್ಯಾಯಮಿತ್ರ
+          Namma NyayaMitra • न्यायमित्र • ನ್ಯಾಯಮಿತ್ರ
         </h1>
         <p className="text-[10px] text-gold uppercase tracking-widest font-bold mt-1.5 flex items-center justify-center gap-1.5">
           <span>Your Multi-lingual Legal Shield</span>

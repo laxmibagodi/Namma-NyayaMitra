@@ -154,7 +154,7 @@ export default function Home({ setActivePage, viewMode, setDocTypePreSelect }: H
       let text = "";
       let langCode = "";
       if (lang === "en") {
-        text = "Welcome to NyayaAI. This is a free legal aid tool built to protect small shopkeepers, kiranas, and business owners from unfair or complex contract agreements. You can upload any contract draft to scan for hidden risks, view direct explanations in Kannada, Hindi and English, or generate customized ready-to-use agreements immediately.";
+        text = "Welcome to Namma NyayaMitra. This is a free legal aid tool built to protect small shopkeepers, kiranas, and business owners from unfair or complex contract agreements. You can upload any contract draft to scan for hidden risks, view direct explanations in Kannada, Hindi and English, or generate customized ready-to-use agreements immediately.";
         langCode = "en-US";
       } else if (lang === "hi") {
         text = "न्यायमित्र में आपका स्वागत है। यह एक निःशुल्क कानूनी सहायता मंच है जो हमारे देश के छोटे देशवासियों, दुकानदारों, किराना मालिकों और छोटे उद्यमियों को जटिल समझौतों के नुकसान से बचाता है। यहाँ आप किसी भी अनुबंध पत्र की फ़ोटो खींचकर उसमें छिपे हुए धोखे या जोखिम को तुरंत और अपनी भाषा में मुफ़्त जान सकते हैं।";
