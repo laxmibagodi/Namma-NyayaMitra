@@ -1,0 +1,6 @@
+{
+  "name": "NyayaAI",
+  "description": "An AI-powered legal assistant built specifically for Indian MSMEs, Kirana shop owners, and micro-entrepreneurs.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,163 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global default catch-all: DENY ALL
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Reuseable safe primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string 
+        && id.size() <= 128 
+        && id.matches('^[a-zA-Z0-9_-]+$');
+    }
+
+    // --- Validation Blueprints ---
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['userId', 'email'])
+        && data.keys().size() <= 24
+        && data.userId == request.auth.uid
+        && data.userId is string && data.userId.size() <= 128
+        && data.email is string && data.email.size() <= 256
+        && (!('displayName' in data) || data.displayName == null || (data.displayName is string && data.displayName.size() <= 256))
+        && (!('firmName' in data) || data.firmName == null || (data.firmName is string && data.firmName.size() <= 256))
+        && (!('prefLanguage' in data) || data.prefLanguage == null || (data.prefLanguage is string && data.prefLanguage.size() <= 32))
+        && (!('joinedAt' in data) || data.joinedAt == null || (data.joinedAt is string && data.joinedAt.size() <= 64))
+        && (!('onboarded' in data) || data.onboarded == null || data.onboarded is bool)
+        && (!('stakeholderType' in data) || data.stakeholderType == null || (data.stakeholderType is string && data.stakeholderType.size() <= 128))
+        && (!('nativeLanguage' in data) || data.nativeLanguage == null || (data.nativeLanguage is string && data.nativeLanguage.size() <= 128))
+        && (!('businessCategory' in data) || data.businessCategory == null || (data.businessCategory is string && data.businessCategory.size() <= 128))
+        && (!('stakeholderIntent' in data) || data.stakeholderIntent == null || (data.stakeholderIntent is string && data.stakeholderIntent.size() <= 512))
+        && (!('locationState' in data) || data.locationState == null || (data.locationState is string && data.locationState.size() <= 128))
+        && (!('msmeCategory' in data) || data.msmeCategory == null || (data.msmeCategory is string && data.msmeCategory.size() <= 128))
+        && (!('startupStage' in data) || data.startupStage == null || (data.startupStage is string && data.startupStage.size() <= 128))
+        && (!('contractPreference' in data) || data.contractPreference == null || (data.contractPreference is string && data.contractPreference.size() <= 128));
+    }
+
+    function isValidAnalysis(data) {
+      return data.keys().hasAll(['id', 'userId', 'documentType', 'overallRiskScore', 'analyzedAt'])
+        && data.keys().size() <= 16
+        && data.userId == request.auth.uid
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.documentType is string && data.documentType.size() <= 128
+        && (data.overallRiskScore is int || data.overallRiskScore is float) && data.overallRiskScore >= 0 && data.overallRiskScore <= 100
+        && data.analyzedAt is string && data.analyzedAt.size() <= 64
+        && (!('fileName' in data) || (data.fileName is string && data.fileName.size() <= 256))
+        && (!('overallVerdict' in data) || data.overallVerdict is map)
+        && (!('partiesInvolved' in data) || data.partiesInvolved is list)
+        && (!('riskFlags' in data) || data.riskFlags is list)
+        && (!('keyObligations' in data) || data.keyObligations is list)
+        && (!('importantDeadlines' in data) || data.importantDeadlines is list)
+        && (!('negotiationTips' in data) || data.negotiationTips is list)
+        && (!('clauseByClause' in data) || data.clauseByClause is list);
+    }
+
+    function isValidContract(data) {
+      return data.keys().hasAll(['id', 'userId', 'documentTitle', 'documentBody', 'createdAt'])
+        && data.keys().size() <= 16
+        && data.userId == request.auth.uid
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.documentTitle is string && data.documentTitle.size() <= 256
+        && data.documentBody is string && data.documentBody.size() <= 100000
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && (!('plainEnglishSummary' in data) || (data.plainEnglishSummary is string && data.plainEnglishSummary.size() <= 8000))
+        && (!('hindiSummary' in data) || (data.hindiSummary is string && data.hindiSummary.size() <= 8000))
+        && (!('keyProtections' in data) || data.keyProtections is list)
+        && (!('importantReminder' in data) || (data.importantReminder is string && data.importantReminder.size() <= 8000))
+        && (!('importantReminderHindi' in data) || (data.importantReminderHindi is string && data.importantReminderHindi.size() <= 8000))
+        && (!('formValues' in data) || data.formValues is map);
+    }
+
+    function isValidAppointment(data) {
+      return data.keys().hasAll(['id', 'userId', 'lawyerId', 'date', 'timeSlot', 'status'])
+        && data.keys().size() <= 24
+        && data.userId == request.auth.uid
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.lawyerId is string && data.lawyerId.size() <= 128
+        && data.date is string && data.date.size() <= 128
+        && data.timeSlot is string && data.timeSlot.size() <= 128
+        && data.status is string && data.status.size() <= 128
+        && (!('lawyerName' in data) || data.lawyerName == null || (data.lawyerName is string && data.lawyerName.size() <= 256))
+        && (!('specialization' in data) || data.specialization == null || (data.specialization is string && data.specialization.size() <= 256))
+        && (!('analysisIdShared' in data) || data.analysisIdShared == null || (data.analysisIdShared is string && data.analysisIdShared.size() <= 128))
+        && (!('analysisFileNameShared' in data) || data.analysisFileNameShared == null || (data.analysisFileNameShared is string && data.analysisFileNameShared.size() <= 256))
+        && (!('aiSummaryShared' in data) || data.aiSummaryShared == null || (data.aiSummaryShared is string && data.aiSummaryShared.size() <= 8000))
+        && (!('notes' in data) || data.notes == null || (data.notes is string && data.notes.size() <= 8000))
+        && (!('videoLink' in data) || data.videoLink == null || (data.videoLink is string && data.videoLink.size() <= 2048))
+        && (!('createdAt' in data) || data.createdAt == null || (data.createdAt is string && data.createdAt.size() <= 128))
+        && (!('feedbackRating' in data) || data.feedbackRating == null || (data.feedbackRating is int && data.feedbackRating >= 1 && data.feedbackRating <= 5))
+        && (!('feedbackComment' in data) || data.feedbackComment == null || (data.feedbackComment is string && data.feedbackComment.size() <= 8000))
+        && (!('feedbackSubmittedAt' in data) || data.feedbackSubmittedAt == null || (data.feedbackSubmittedAt is string && data.feedbackSubmittedAt.size() <= 128));
+    }
+
+    function isValidChat(data) {
+      return data.keys().hasAll(['id', 'userId', 'lawyerId', 'messageText', 'sender', 'timestamp'])
+        && data.keys().size() <= 6
+        && data.userId == request.auth.uid
+        && data.id is string && data.id.size() <= 128
+        && data.userId is string && data.userId.size() <= 128
+        && data.lawyerId is string && data.lawyerId.size() <= 128
+        && data.messageText is string && data.messageText.size() <= 8000
+        && data.sender is string && data.sender.size() <= 128
+        && data.timestamp is string && data.timestamp.size() <= 128;
+    }
+
+    // --- Collections ---
+
+    // 1. Users Profile Collection
+    match /users/{userId} {
+      allow get: if isSignedIn() && request.auth.uid == userId;
+      allow create: if isSignedIn() && request.auth.uid == userId && isValidId(userId) && isValidUser(request.resource.data);
+      allow update: if isSignedIn() && request.auth.uid == userId && isValidId(userId) && isValidUser(request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['displayName', 'firmName', 'prefLanguage', 'onboarded', 'stakeholderType', 'nativeLanguage', 'businessCategory', 'stakeholderIntent', 'email', 'joinedAt', 'userId', 'locationState', 'msmeCategory', 'startupStage', 'contractPreference'])
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['email']) || request.resource.data.email == resource.data.email)
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['joinedAt']) || request.resource.data.joinedAt == resource.data.joinedAt)
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['userId']) || request.resource.data.userId == resource.data.userId);
+    }
+
+    // 2. Analyses Collection
+    match /analyses/{analysisId} {
+      allow get: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && isValidId(analysisId) && isValidAnalysis(request.resource.data);
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+    // 3. Contracts Drafts Collection
+    match /contracts/{contractId} {
+      allow get: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && isValidId(contractId) && isValidContract(request.resource.data);
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+    // 4. Appointments Collection
+    match /appointments/{appId} {
+      allow get, list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && isValidId(appId) && isValidAppointment(request.resource.data);
+      allow update: if isSignedIn() && isValidId(appId) && resource.data.userId == request.auth.uid && isValidAppointment(request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'videoLink', 'notes', 'feedbackRating', 'feedbackComment', 'feedbackSubmittedAt']);
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+    // 5. Chat History Collection for consultations
+    match /chats/{chatId} {
+      allow get, list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && isValidId(chatId) && isValidChat(request.resource.data);
+      allow update: if isSignedIn() && isValidId(chatId) && resource.data.userId == request.auth.uid && isValidChat(request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['messageText']);
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+  }
+}

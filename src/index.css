@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #0F172A;
+  --color-light-bg: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F1F5F9;
+  --color-gold: #A3781A;
+  --color-gold-light: #C59B27;
+  --color-teal: #0F766E;
+  --color-danger: #B91C1C;
+  --color-warning: #D97706;
+  --color-safe: #15803D;
+  --color-text: #1E293B;
+  --color-muted: #64748B;
+  --color-border: rgba(163, 120, 26, 0.18);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-light-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+  }
+}
+
+/* Keyframe for continuous scales-of-justice tipping animation */
+@keyframes scalesTipping {
+  0% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+  100% { transform: rotate(-8deg); }
+}
+
+.animate-scales {
+  animation: scalesTipping 3s ease-in-out infinite;
+  transform-origin: center 20px;
+}
+
+/* Base fade-up animations */
+.fade-up-enter {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Continuous rising gold particles */
+@keyframes goldFloat {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.gold-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-gold);
+  opacity: 0;
+  pointer-events: none;
+}

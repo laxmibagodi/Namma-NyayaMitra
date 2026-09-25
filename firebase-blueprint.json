@@ -1,0 +1,238 @@
+{
+  "entities": {
+    "user": {
+      "title": "User",
+      "description": "Represents a small business owner registered in NyayaAI.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The unique Firebase Authentication UID of the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address linked to the user account."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The user's display name or proprietor name."
+        },
+        "firmName": {
+          "type": "string",
+          "description": "The name of the user's MSME or business firm."
+        },
+        "prefLanguage": {
+          "type": "string",
+          "description": "Preferred interface language ('both' or 'en' or 'hi')."
+        },
+        "joinedAt": {
+          "type": "string",
+          "description": "ISO timestamp representing user registration date."
+        },
+        "onboarded": {
+          "type": "boolean",
+          "description": "Indicates whether the user has finished their onboarding registration."
+        },
+        "stakeholderType": {
+          "type": "string",
+          "description": "What type of stakeholder role (e.g. Proprietor, Freelancer, Vendor)."
+        },
+        "nativeLanguage": {
+          "type": "string",
+          "description": "The user's primary spoken native language selected during onboarding."
+        },
+        "businessCategory": {
+          "type": "string",
+          "description": "Small business or manufacturing sector domain."
+        },
+        "stakeholderIntent": {
+          "type": "string",
+          "description": "What the user wants to accomplish mainly with NyayaAI."
+        },
+        "locationState": {
+          "type": "string",
+          "description": "The state geolocation of the user e.g. Karnataka."
+        },
+        "msmeCategory": {
+          "type": "string",
+          "description": "The MSME size classification of the business."
+        },
+        "startupStage": {
+          "type": "string",
+          "description": "Starting stage of the micro project."
+        },
+        "contractPreference": {
+          "type": "string",
+          "description": "Whether simple or detailed agreements are preferred."
+        }
+      },
+      "required": ["userId", "email"]
+    },
+    "analysis": {
+      "title": "Analysis",
+      "description": "Represents a scanned and processed legal contract review.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the analysis record."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to the owner user's UID."
+        },
+        "fileName": {
+          "type": "string",
+          "description": "Name of the uploaded contract file or image."
+        },
+        "documentType": {
+          "type": "string",
+          "description": "The category ID of the scanned document e.g. 'vendor', 'rental'."
+        },
+        "overallRiskScore": {
+          "type": "integer",
+          "description": "Risk score index from 0 to 100."
+        },
+        "overallVerdict": {
+          "type": "object",
+          "description": "Bilingual overall summary verdict notes."
+        },
+        "partiesInvolved": {
+          "type": "array",
+          "description": "List of companies or individuals detected."
+        },
+        "riskFlags": {
+          "type": "array",
+          "description": "Detail list of potential legal traps and risk conditions."
+        },
+        "keyObligations": {
+          "type": "array",
+          "description": "Onerous commitment items and details."
+        },
+        "importantDeadlines": {
+          "type": "array",
+          "description": "Critical time durations extracted."
+        },
+        "negotiationTips": {
+          "type": "array",
+          "description": "Professional suggestions for bargaining revisions."
+        },
+        "analyzedAt": {
+          "type": "string",
+          "description": "Date & time of this scanning request."
+        }
+      },
+      "required": ["id", "userId", "documentType", "overallRiskScore", "analyzedAt"]
+    },
+    "contract": {
+      "title": "Contract",
+      "description": "A customized drafted agreement document generated from form inputs.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique Identifier of the generated contract draft."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference identifier to the creator user UID."
+        },
+        "documentTitle": {
+          "type": "string",
+          "description": "Formal header title of the deed."
+        },
+        "documentBody": {
+          "type": "string",
+          "description": "Fully formatted text contract body."
+        },
+        "plainEnglishSummary": {
+          "type": "string",
+          "description": "Bilingual visual summary description in English."
+        },
+        "hindiSummary": {
+          "type": "string",
+          "description": "Bilingual visual summary description in Hindi."
+        },
+        "keyProtections": {
+          "type": "array",
+          "description": "List of core protections embedded into the contract draft."
+        },
+        "importantReminder": {
+          "type": "string",
+          "description": "English warning guidelines note."
+        },
+        "importantReminderHindi": {
+          "type": "string",
+          "description": "Hindi warning guidelines note."
+        },
+        "formValues": {
+          "type": "object",
+          "description": "Key-value dictionary parameters of input values used."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp indicating generation date."
+        }
+      },
+      "required": ["id", "userId", "documentTitle", "documentBody", "createdAt"]
+    },
+    "appointment": {
+      "title": "Appointment",
+      "description": "Represents a scheduled lawyer consultation booking.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "lawyerId": { "type": "string" },
+        "lawyerName": { "type": "string" },
+        "specialization": { "type": "string" },
+        "date": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "status": { "type": "string" },
+        "analysisIdShared": { "type": "string" },
+        "analysisFileNameShared": { "type": "string" },
+        "aiSummaryShared": { "type": "string" },
+        "notes": { "type": "string" },
+        "videoLink": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "lawyerId", "date", "timeSlot", "status"]
+    },
+    "chat": {
+      "title": "Chat Message",
+      "description": "Represents a message sent to a verified lawyer in consultation.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "lawyerId": { "type": "string" },
+        "messageText": { "type": "string" },
+        "sender": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "userId", "lawyerId", "messageText", "sender", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "user",
+      "description": "Private registry of MSME proprietors profiles."
+    },
+    "/analyses/{analysisId}": {
+      "schema": "analysis",
+      "description": "Individual contract scans, accessible only by the respective owner user."
+    },
+    "/contracts/{contractId}": {
+      "schema": "contract",
+      "description": "Document draft records created by users, private and secure."
+    },
+    "/appointments/{appId}": {
+      "schema": "appointment",
+      "description": "Upcoming and historic booked lawyer consultation meetings."
+    },
+    "/chats/{chatId}": {
+      "schema": "chat",
+      "description": "Direct consultation messages threaded with lawyer partners."
+    }
+  }
+}
