@@ -49,6 +49,9 @@ In India, over **63 million MSMEs** face substantial operational and financial r
 - 📝 Generates enforceable, court-ready agreements
 - 🚨 Provides 24/7 crisis guidance for legal emergencies
 
+### Dashboard
+![Namma NyayaMitra Dashboard](screenshots/dashboard.png)
+
 ---
 
 ## 🏗️ Architecture Flowcharts
