@@ -622,7 +622,7 @@ export default function GovSchemes() {
                   }`}
                 >
                   <p className="font-bold underline text-[8.5px] mb-1 opacity-70">
-                    {ch.sender === "user" ? "YOU" : "NYAYAAI EXPERT"}
+                    {ch.sender === "user" ? "YOU" : "Namma NyayaMitra EXPERT"}
                   </p>
                   <p className="font-semibold">{ch.text}</p>
                 </div>

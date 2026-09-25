@@ -258,7 +258,7 @@ export default function Sidebar({
             <div className="flex items-center gap-2.5 pb-2 border-b border-border/10">
               <Scale className="h-5 w-5 text-gold" />
               <div className="flex flex-col text-left">
-                <span className="font-serif font-bold text-lg text-gold leading-none">NyayaAI</span>
+                <span className="font-serif font-bold text-lg text-gold leading-none">Namma NyayaMitra</span>
                 <span className="text-[9px] text-muted italic font-medium leading-none mt-1">
                   {nativeLanguage === "Kannada" ? "ಉಚಿತ ರಕ್ಷಾ ಕವಚ" 
                    : nativeLanguage === "Hindi" ? "निःशुल्क कानूनी कवच" 

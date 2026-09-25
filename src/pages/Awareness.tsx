@@ -463,7 +463,7 @@ Kindly take notice that you are required to discharge the full amount of ₹${pa
 
 Sincerely,
 Udyam Verified Merchant / MSME Representative
-[Drafted via NyayaAI Rights Shield Portal]
+[Drafted via Namma NyayaMitra Rights Shield Portal]
   `;
 
   return (

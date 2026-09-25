@@ -34,7 +34,7 @@ export default function Navbar({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Left: NyayaAI logo and Mobile Toggle */}
+          {/* Left: Namma NyayaMitra logo and Mobile Toggle */}
           <div className="flex items-center gap-2">
             {/* Mobile Hamburger menu button - opens the sidebar drawer overlay */}
             <button
@@ -53,13 +53,13 @@ export default function Navbar({
               </div>
               <div className="flex flex-col text-left">
                 <span className="font-serif font-bold text-lg text-gold leading-none tracking-tight">
-                  NyayaAI
+                  Namma NyayaMitra
                 </span>
                 <span className="text-[9px] text-muted italic font-medium leading-normal mt-0.5 whitespace-nowrap">
                   {nativeLanguage === "Kannada" ? "ನ್ಯಾಯಮಿತ್ರ • ಉಚಿತ ರಕ್ಷಾ ಕವಚ" 
                    : nativeLanguage === "Hindi" ? "न्यायमित्र • निःशुल्क कानूनी कवच" 
                    : nativeLanguage === "Telugu" ? "న్యాయమిత్ర • లీగల్ షీల్డ్"
-                   : "NyayaAI • Legal Shield"}
+                   : "Namma NyayaMitra • Legal Shield"}
                 </span>
               </div>
             </div>

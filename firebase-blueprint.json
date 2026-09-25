@@ -2,7 +2,7 @@
   "entities": {
     "user": {
       "title": "User",
-      "description": "Represents a small business owner registered in NyayaAI.",
+      "description": "Represents a small business owner registered in Namma NyayaMitra.",
       "type": "object",
       "properties": {
         "userId": {
@@ -47,7 +47,7 @@
         },
         "stakeholderIntent": {
           "type": "string",
-          "description": "What the user wants to accomplish mainly with NyayaAI."
+          "description": "What the user wants to accomplish mainly with Namma NyayaMitra."
         },
         "locationState": {
           "type": "string",

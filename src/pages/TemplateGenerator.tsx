@@ -399,7 +399,7 @@ export default function TemplateGenerator({
               
               {/* Background watermark */}
               <div className="absolute inset-0 select-none flex items-center justify-center opacity-[0.03] pointer-events-none transform -rotate-45 font-sans font-black text-4xl text-navy">
-                NyayaAI Draft
+                Namma NyayaMitra Draft
               </div>
 
               <div className="relative z-10 space-y-4 text-xs tracking-normal font-sans">

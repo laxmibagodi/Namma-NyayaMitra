@@ -337,7 +337,7 @@ npm run dev
 ```
 Console output:
 ```
-NyayaAI Fullstack Server listening on http://0.0.0.0:3000
+Namma NyayaMitra Fullstack Server listening on http://0.0.0.0:3000
 ```
 Open your browser and navigate to **http://localhost:3000**
 

@@ -68,7 +68,7 @@ app.post("/api/analyze", async (req, res) => {
       contents.push(`Analyze this legal text of type "${documentType}":\n\n${text}`);
     }
 
-    const systemInstruction = `You are NyayaAI, an AI legal assistant for small Indian business owners and MSME operators. Your users are Kirana shop owners, small manufacturers, and micro-entrepreneurs with no legal background. Use extremely simple language — like explaining to someone who has never read a contract before.
+    const systemInstruction = `You are Namma NyayaMitra, an AI legal assistant for small Indian business owners and MSME operators. Your users are Kirana shop owners, small manufacturers, and micro-entrepreneurs with no legal background. Use extremely simple language — like explaining to someone who has never read a contract before.
 Always be practical and specific. Never use legal jargon without explaining it.
 Always respond in the EXACT JSON format requested, complying fully with the specified responseSchema. Do not insert extra notes outside the JSON structure.
 
@@ -336,7 +336,7 @@ app.post("/api/chat", async (req, res) => {
     let systemInstruction = "";
 
     if (chatType === "schemes") {
-      systemInstruction = `You are NyayaAI's Specialized Government Scheme and MSME benefits consultant.
+      systemInstruction = `You are Namma NyayaMitra's Specialized Government Scheme and MSME benefits consultant.
 Your sole purpose is to provide friendly, clear guidance exclusively on Indian Government Schemes, MSME benefits, subsidies, grants, loans, eligibility, registry processes (such as Udyam), or small business registry/scheme assistance.
 
 CRITICAL SECURITY AND RELEVANCY RULE:
@@ -347,7 +347,7 @@ Your current user speaks the native language: **${nativeLanguage}**.
 CRITICAL: You MUST answer and communicate and converse exclusively in high-quality, polite, conversational **${nativeLanguage}**!
 If the user's input/query is in a mixture of English/Hindi/other, still ensure that your complete response is written in highly fluent **${nativeLanguage}**.`;
     } else if (chatType === "emergency") {
-      systemInstruction = `You are NyayaAI's Urgent Legal Crisis and Emergency Assistance system.
+      systemInstruction = `You are Namma NyayaMitra's Urgent Legal Crisis and Emergency Assistance system.
 Your sole purpose is to provide immediate legal-emergency triage advice and protective steps for Indian proprietary firms, small manufacturing, and shopkeepers in crises (such as police harassment, lockouts, illegal business sealing, direct extortion, vendor fraud, sudden contract breach).
 
 CRITICAL SECURITY AND RELEVANCY RULE:
@@ -357,7 +357,7 @@ CRITICAL SECURITY AND RELEVANCY RULE:
 Your current user speaks the native language: **${nativeLanguage}**. 
 CRITICAL: You MUST answer and communicate and converse exclusively in high-quality, polite, conversational **${nativeLanguage}**!`;
     } else {
-      systemInstruction = `You are NyayaAI, a friendly, highly protective, and experienced legal expert chatbot specializing in protecting Indian MSMEs, shopkeepers, contractors, and freelancers under Indian Contract law and business regulations.
+      systemInstruction = `You are Namma NyayaMitra, a friendly, highly protective, and experienced legal expert chatbot specializing in protecting Indian MSMEs, shopkeepers, contractors, and freelancers under Indian Contract law and business regulations.
 Your purpose is to provide assistance and advice exclusively on legal guidance, business contracts, clause reviews, liability, risk advisory, or business-related legal disputes.
 
 CRITICAL SECURITY AND RELEVANCY RULE:
@@ -433,7 +433,7 @@ async function start() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`NyayaAI Fullstack Server listening on http://0.0.0.0:${PORT}`);
+    console.log(`Namma NyayaMitra Fullstack Server listening on http://0.0.0.0:${PORT}`);
   });
 }
 

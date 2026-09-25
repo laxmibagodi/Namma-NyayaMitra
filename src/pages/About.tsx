@@ -18,7 +18,7 @@ export default function About() {
           {nativeLanguage === "Kannada" ? "ನ್ಯಾಯಮಿತ್ರದ ಹಿನ್ನೆಲೆ ಮತ್ತು ಉದ್ಧೇಶ"
            : nativeLanguage === "Hindi" ? "न्यायमित्र की पृष्ठभूमि और उद्देश्य"
            : nativeLanguage === "Telugu" ? "న్యాయమిత్ర ప్రస్థానం మరియు లక్ష్యం"
-           : "Background and mission of NyayaAI"}
+           : "Background and mission of Namma NyayaMitra"}
         </p>
       </div>
 
@@ -32,11 +32,11 @@ export default function About() {
             {nativeLanguage === "Kannada" ? "ಸಾಮಾನ್ಯ ಕಾನೂನು ಒಪ್ಪಂದಗಳ ವಿಶ್ಲೇಷಣೆ ಪಡೆಯಲು ಸಣ್ಣ ವ್ಯಾಪಾರಿಗಳು ವಕೀಲರಿಗೆ ದುಬಾರಿ ಶುಲ್ಕ ತೆರಬೇಕಾಗಿಲ್ಲ. ಆರ್ಥಿಕ ಅಸಮಾನತೆ ತೊಡೆದುಹಾಕಲು ಉಚಿತ ಕಾನೂನು ನೆರವು ನೀಡುವುದು ನಮ್ಮ ಆಶಯ."
              : nativeLanguage === "Hindi" ? "छोटे और मध्यम व्यवसायियों (MSMEs) को वह कानूनी सुरक्षा मिल सके जिसके वे हकदार हैं। हमारा मानना है कि सही कानूनी जानकारी और अनुबंधों की समझ सिर्फ बड़े कॉर्पोरेट्स या अमीरों का विशेषाधिकार नहीं होना चाहिए।"
              : nativeLanguage === "Telugu" ? "చిన్న మరియు మధ్యతరగతి వ్యాపారులకు (MSMEs) వారికి కావలసిన న్యాయ రక్షణను ఉచితంగా అందించడమే మా లక్ష్యం. న్యాయ పరిజ్ఞానం అనేది కేవలం ధనవంతులకు మాత్రమే పరిమితం కాకూడదు."
-             : "NyayaAI was built to give every Indian small business owner the legal protection they deserve — without needing to pay a lawyer for basic documents and contract reviews. We believe legal clarity should not be a privilege of the wealthy."}
+             : "Namma NyayaMitra was built to give every Indian small business owner the legal protection they deserve — without needing to pay a lawyer for basic documents and contract reviews. We believe legal clarity should not be a privilege of the wealthy."}
           </p>
           {nativeLanguage !== "English" && (
             <p className="text-xs text-muted italic leading-relaxed font-normal opacity-70">
-              English: NyayaAI was built to give every Indian small business owner the legal protection they deserve — without needing to pay a lawyer for basic documents and contract reviews.
+              English: Namma NyayaMitra was built to give every Indian small business owner the legal protection they deserve — without needing to pay a lawyer for basic documents and contract reviews.
             </p>
           )}
         </div>
@@ -117,7 +117,7 @@ export default function About() {
             {nativeLanguage === "Kannada" ? "ನ್ಯಾಯಮಿತ್ರವನ್ನು ಅತ್ಯುನ್ನತ ಸರ್ವರ್ ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಕೋಬಲ್ಟ್ ಕರಾರುಗಳ ಸುರಕ್ಷತಾ ತತ್ವದ ಮೇಲೆ ರಚಿಸಲಾಗಿದೆ."
              : nativeLanguage === "Hindi" ? "न्यायमित्र पूर्णतः सुरक्षित रिएक्ट और नोड एक्सप्रेस सर्वर प्रणालियों पर काम करता है।"
              : nativeLanguage === "Telugu" ? "న్యాయమిత్ర రియాక్ట్ మరియు నోడ్ జెఎస్ ఎక్స్‌ప్రెస్ సర్వర్ సమన్వయంతో పనిచేస్తుంది."
-             : "NyayaAI is developed as a production-level fullstack React application backed by custom Express services to maintain credentials securely."}
+             : "Namma NyayaMitra is developed as a production-level fullstack React application backed by custom Express services to maintain credentials securely."}
           </p>
           <ul className="list-disc list-inside space-y-1.5 pl-2 font-mono text-[11px]">
             <li><strong className="text-text">Client-Side Runtime:</strong> React 19 + TypeScript bundler via Vite 6</li>

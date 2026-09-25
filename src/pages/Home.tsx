@@ -435,7 +435,7 @@ export default function Home({ setActivePage, viewMode, setDocTypePreSelect }: H
         {/* Modern Title Header */}
         <div className="space-y-1 mb-4 select-text">
           <h1 className="font-serif font-black text-5xl sm:text-7xl text-gold tracking-tight">
-            NyayaAI
+            Namma NyayaMitra
           </h1>
           <h2 className="text-md sm:text-lg text-stone-500 tracking-widest uppercase font-black">
             {translate("welcomeTitle", nativeLanguage)}
@@ -900,7 +900,7 @@ export default function Home({ setActivePage, viewMode, setDocTypePreSelect }: H
             <div className="text-center pt-2">
               {authMode === "login" ? (
                 <p className="text-[10px] text-stone-500 font-bold">
-                  New to NyayaAI?{" "}
+                  New to Namma NyayaMitra?{" "}
                   <button
                     onClick={() => {
                       setAuthMode("signup");

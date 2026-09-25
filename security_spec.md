@@ -1,6 +1,6 @@
-# Security Specification & Threat Model (NyayaAI AI)
+# Security Specification & Threat Model (Namma NyayaMitra AI)
 
-This document establishes the rigorous Attribute-Based Access Control (ABAC) bounds, data invariants, and pentesting payloads designed to verify the security of the Firestore instance for NyayaAI.
+This document establishes the rigorous Attribute-Based Access Control (ABAC) bounds, data invariants, and pentesting payloads designed to verify the security of the Firestore instance for Namma NyayaMitra.
 
 ## 1. Data Invariants
 

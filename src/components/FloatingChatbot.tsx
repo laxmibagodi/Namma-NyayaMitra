@@ -52,10 +52,10 @@ export default function FloatingChatbot() {
 
     // Load initial welcome message based on selected Native Language
     const nativeLang = userProfile?.nativeLanguage || "Hindi";
-    let welcomeText = `नमस्ते ${userProfile?.displayName || ""}! मैं आपका NyayaAI कानूनी चैटबॉट हूँ। मैं आपकी मातृभाषा में सहायता करूँगा। मुझसे अपने अनुबंध के विषय में कोई भी प्रश्न पूछें।`;
+    let welcomeText = `नमस्ते ${userProfile?.displayName || ""}! मैं आपका Namma NyayaMitra कानूनी चैटबॉट हूँ। मैं आपकी मातृभाषा में सहायता करूँगा। मुझसे अपने अनुबंध के विषय में कोई भी प्रश्न पूछें।`;
     
     if (nativeLang !== "Hindi") {
-      welcomeText = `Hello ${userProfile?.displayName || ""}! I am your NyayaAI legal chat assistant. I am fully trained to reply in ${nativeLang}. Feel free to ask me general business legal questions, or clip/attach documents from your vault or computer to audit them together!`;
+      welcomeText = `Hello ${userProfile?.displayName || ""}! I am your Namma NyayaMitra legal chat assistant. I am fully trained to reply in ${nativeLang}. Feel free to ask me general business legal questions, or clip/attach documents from your vault or computer to audit them together!`;
     }
 
     setMessages([
@@ -198,7 +198,7 @@ export default function FloatingChatbot() {
         {
           id: Math.random().toString(),
           sender: "bot",
-          text: `Error: Unable to connect to NyayaAI servers. कृपया इंटरनेट की जांच करें और पुनः प्रयास करें। Check if your GEMINI_API_KEY is configured.`,
+          text: `Error: Unable to connect to Namma NyayaMitra servers. कृपया इंटरनेट की जांच करें और पुनः प्रयास करें। Check if your GEMINI_API_KEY is configured.`,
           timestamp: new Date()
         }
       ]);
@@ -268,7 +268,7 @@ export default function FloatingChatbot() {
               </div>
               <div className="text-left">
                 <h4 className="font-serif font-black text-xs tracking-tight text-white flex items-center gap-1">
-                  NyayaAI Assistant <span className="font-serif text-[10px] text-gold font-bold">न्यायमित्र</span>
+                  Namma NyayaMitra Assistant <span className="font-serif text-[10px] text-gold font-bold">न्यायमित्र</span>
                 </h4>
                 <p className="text-[9px] text-gold font-semibold leading-none">
                   ⚡ Online in {userProfile?.nativeLanguage || "Hindi"}
@@ -386,7 +386,7 @@ export default function FloatingChatbot() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                   </svg>
-                  <span className="font-bold text-[10px]">NyayaAI is brainstorming...</span>
+                  <span className="font-bold text-[10px]">Namma NyayaMitra is brainstorming...</span>
                 </div>
               </div>
             )}

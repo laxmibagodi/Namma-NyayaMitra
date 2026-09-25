@@ -223,7 +223,7 @@ export async function getUserProfile(userId: string): Promise<UserProfile | null
       const fallback: UserProfile = {
         userId,
         email: auth.currentUser?.email || "",
-        displayName: auth.currentUser?.displayName || "NyayaAI Member",
+        displayName: auth.currentUser?.displayName || "Namma NyayaMitra Member",
         firmName: "",
         prefLanguage: "both",
         joinedAt: new Date().toISOString(),
@@ -237,7 +237,7 @@ export async function getUserProfile(userId: string): Promise<UserProfile | null
     return cachedProfile || {
       userId,
       email: auth.currentUser?.email || "",
-      displayName: auth.currentUser?.displayName || "NyayaAI Member",
+      displayName: auth.currentUser?.displayName || "Namma NyayaMitra Member",
       firmName: "",
       prefLanguage: "both",
       joinedAt: new Date().toISOString(),

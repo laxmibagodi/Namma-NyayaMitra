@@ -79,7 +79,7 @@ const EMERGENCY_GUIDES: EmergencyOption[] = [
     stepsEn: [
       "Do NOT panic. Receiving a legal notice does not mean you are arrested or found guilty.",
       "Check the precise response deadline mentioned in the notice (usually 15 to 30 days).",
-      "Scan and lock the notice securely inside your NyayaAI cloud-secure digital vault repository.",
+      "Scan and lock the notice securely inside your Namma NyayaMitra cloud-secure digital vault repository.",
       "Draft a formal response instead of ignoring it, to avoid ex-parte decrees."
     ],
     stepsKn: [
@@ -150,7 +150,7 @@ export default function EmergencyAssistance() {
         ? "ಗಾಬರಿಯಾಗಬೇಡಿ. ಪ್ರಮುಖ ರಕ್ಷಣಾ ವ್ಯವಸ್ಥೆ ಸಿದ್ಧವಾಗಿದೆ. ನಿಮ್ಮ ಹತ್ತಿರದ ಸಹಾಯವಾಣಿ ಸಂಖ್ಯೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ."
         : userProfile?.nativeLanguage === "Hindi"
         ? "कृपया घबराएं नहीं। आपातकालीन कानूनी सहायता प्रणाली सक्रिय कर दी गई है। नीचे दिए गए निर्देशों का पालन करें।"
-        : "Do not panic. Your NyayaAI priority emergency shield is active. Please look at the immediate steps to defend yourself.";
+        : "Do not panic. Your Namma NyayaMitra priority emergency shield is active. Please look at the immediate steps to defend yourself.";
       
       const utterance = new SpeechSynthesisUtterance(textToSpeak);
       utterance.lang = userProfile?.nativeLanguage === "Kannada" ? "kn-IN" : userProfile?.nativeLanguage === "Hindi" ? "hi-IN" : "en-IN";

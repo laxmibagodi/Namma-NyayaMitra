@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Scale logo footer representation */}
         <div className="flex justify-center items-center gap-2 mb-4 text-gold/80">
           <Scale className="h-5 w-5" />
-          <span className="font-serif font-bold text-lg text-gold leading-none">NyayaAI</span>
+          <span className="font-serif font-bold text-lg text-gold leading-none">Namma NyayaMitra</span>
           <span className="text-xs text-muted">|</span>
           <span className="text-xs text-muted italic font-medium">छोटे व्यवसायों का कानूनी ढाल</span>
         </div>
@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-xs text-text leading-relaxed font-medium">
-                DISCLAIMER: NyayaAI provides AI-generated legal summaries and template drafting tools based on machine learning.
+                DISCLAIMER: Namma NyayaMitra provides AI-generated legal summaries and template drafting tools based on machine learning.
                 This information is created for general educational and reference purposes only, and does not constitute formal legal advice or create a lawyer-client relationship.
                 Always consult a registered, qualified advocate or attorney for serious legal reviews, stamps, or litigation matters.
               </p>
@@ -37,7 +37,7 @@ export default function Footer() {
 
         {/* Brand Copyright */}
         <p className="text-xs text-muted">
-          &copy; {new Date().getFullYear()} NyayaAI AI. Built for MSME Empowerment. Always secure, always private.
+          &copy; {new Date().getFullYear()} Namma NyayaMitra AI. Built for MSME Empowerment. Always secure, always private.
         </p>
 
       </div>

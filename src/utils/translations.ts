@@ -83,7 +83,7 @@ export const TRANSLATIONS: Record<string, Record<LanguageType, string>> = {
 
   // Home Page Static Texts
   welcomeTitle: {
-    English: "NyayaAI • Multi-lingual Legal Shield",
+    English: "Namma NyayaMitra • Multi-lingual Legal Shield",
     Hindi: "न्यायमित्र • बहुभाषी कानूनी सुरक्षा कवच",
     Kannada: "ನ್ಯಾಯಮಿತ್ರ • ಬಹುಭಾಷಾ ಕಾನೂನು ರಕ್ಷಾ ಕವಚ",
     Telugu: "న్యాయమిత్ర • బహుభాషా న్యాయ రక్షణ కవచం"
@@ -101,13 +101,13 @@ export const TRANSLATIONS: Record<string, Record<LanguageType, string>> = {
     Telugu: "వాయిస్ అసిస్టెంట్ గైడ్"
   },
   voiceGuidanceStart: {
-    English: "Listening or reading options inside NyayaAI",
+    English: "Listening or reading options inside Namma NyayaMitra",
     Hindi: "सुनने या पढ़ने वाले विकल्प न्यायमित्र के अंदर चालू हैं",
     Kannada: "ನಿಮ್ಮ ಮಾತೃಭಾಷೆಯಲ್ಲಿ ಸಂಪೂರ್ಣ ಆಡಿಯೋ ಕೇಳಿ",
     Telugu: "మీ మాతృభాషలో పూర్తి ఆడియో వినండి"
   },
   welcomeDesc: {
-    English: "NyayaAI is free legal aid platform protecting micro MSMEs and startups from complex contracts. Standard, transparent agreements are created with real-time translation and direct risk assessments in Karnataka and nearby sectors.",
+    English: "Namma NyayaMitra is free legal aid platform protecting micro MSMEs and startups from complex contracts. Standard, transparent agreements are created with real-time translation and direct risk assessments in Karnataka and nearby sectors.",
     Hindi: "न्यायमित्र सूक्ष्म व्यवसायिक MSMEs और छोटे व्यापारियों को जटिल कानूनी शब्दों के नुकसान से बचाने का प्रयास है। सरल रूप से अनुवाद और पूर्ण सुरक्षा रिपोर्ट तुरंत पाएं।",
     Kannada: "ನ್ಯಾಯಮಿತ್ರವು ಸಣ್ಣ ವ್ಯವಹಾರಗಳು ಹಾಗೂ ಉದ್ಯಮಿಗಳನ್ನು ವಂಚನೆಯ ಜಟಿಲ ಕರಾರುಗಳಿಂದ ರಕ್ಷಿಸುವ ಉಚಿತ ತಾಣವಾಗಿದೆ. ಕನ್ನಡ ಹಾಗೂ ಪ್ರಾದೇಶಿಕ ಭಾಷೆಗಳಲ್ಲಿ ಸುಲಭ ವಿಶ್ಲೇಷಣೆ ಪಡೆಯಿರಿ.",
     Telugu: "న్యాయమిత్ర సూక్ష్మ MSME వర్గాలను మరియు స్టార్టప్‌లను కఠినమైన ఒప్పందాల నుండి రక్షించే ఉచిత వేదిక. మీ మాతృభాషలో సులభమైన నివేదిక పొందండి."
@@ -141,7 +141,7 @@ export const TRANSLATIONS: Record<string, Record<LanguageType, string>> = {
     Telugu: "ద్విభాషా కాంట్రాక్ట్ స్కానర్ & రిస్క్ విశ్లేషణ"
   },
   analyzerSubheadline: {
-    English: "Upload a PDF or draft. NyayaAI highlights unfair terms and explains obligations in your chosen native language.",
+    English: "Upload a PDF or draft. Namma NyayaMitra highlights unfair terms and explains obligations in your chosen native language.",
     Hindi: "PDF या अनुबंध अपलोड करें। न्यायमित्र अनुचित शर्तों को चिन्हित कर सरल देशीय भाषा में समझाएगा।",
     Kannada: "ನಿಮ್ಮ ಯಾವುದೇ ಪಿಡಿಎಫ್ ಒಪ್ಪಂದವನ್ನು ಹಾಕಿ. ಮೋಸದ ಷರತ್ತುಗಳನ್ನು ಗುರುತಿಸಿ ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಸರಳವಾಗಿ ವಿವರಿಸುತ್ತದೆ.",
     Telugu: "ఒప్పందం పత్రం లేదా PDF అప్‌లోడ్ చేయండి. న్యాయమిత్ర కఠినమైన నిబంధనలను సులభంగా వివరిస్తుంది."
@@ -241,13 +241,13 @@ export const TRANSLATIONS: Record<string, Record<LanguageType, string>> = {
 
   // About Page Translations
   aboutHeadline: {
-    English: "About NyayaAI",
+    English: "About Namma NyayaMitra",
     Hindi: "न्यायमित्र के बारे में",
     Kannada: "ನ್ಯಾಯಮಿತ್ರದ ಬಗ್ಗೆ ಮಾಹಿತಿ",
     Telugu: "న్యాయమిత్ర గురించి సమాచారం"
   },
   aboutMission: {
-    English: "Legal clarity should be accessible to all, not just privileged corporations. NyayaAI represents a humble tool to democratize business protection.",
+    English: "Legal clarity should be accessible to all, not just privileged corporations. Namma NyayaMitra represents a humble tool to democratize business protection.",
     Hindi: "कानूनी स्पष्टता हर भारतीय नागरिक का अधिकार होनी चाहिए, न कि केवल अमीर कंपनियों का। न्यायमित्र इसी दिशा में समर्पित है।",
     Kannada: "ಕಾನೂನಿನ ತಿಳುವಳಿಕೆ ಕೇವಲ ಶ್ರೀಮಂತರ ಸೊತ್ತಾಗಬಾರದು. ಭಾರತದ ಪ್ರತಿಯೊಬ್ಬ ಸಣ್ಣ ಉದ್ಯಮಿಗೂ ಇದು ತಲುಪಲಿ ಎಂಬುದು ನ್ಯಾಯಮಿತ್ರದ ಆಶಯ.",
     Telugu: "న్యాయ పరిజ్ఞానం అనేది కేవలం పెద్ద స్టార్టప్‌లకు మాత్రమే కాదు, సామాన్య వ్యాపారుల అందరి హక్కు కావాలనేదే న్యాయమిత్ర ఆశయం."

@@ -856,7 +856,7 @@ export default function Dashboard({
                     <div className="space-y-2 mt-2 bg-surface-2 p-3.5 rounded-2xl border border-border/5">
                       <div className="flex items-center gap-1.5 font-bold text-navy">
                         <ShieldAlert className="h-4 w-4 text-gold shrink-0" />
-                        <span>Bespoke NyayaAI Safety Verdict:</span>
+                        <span>Bespoke Namma NyayaMitra Safety Verdict:</span>
                       </div>
                       <p className="text-[11px] text-text/95 leading-relaxed font-semibold text-navy">
                         {viewMode === "hi" ? selectedAuditDoc.overallVerdict?.hindi : selectedAuditDoc.overallVerdict?.english}
